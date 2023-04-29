@@ -43,7 +43,10 @@ function BotCard({ bot , clickEvent , deleteBot}) {
           <span>
             <div className="ui center aligned segment basic">
               <button
-               
+                className="ui mini red button"
+                onClick={(event) =>{
+                  event.stopPropagation();
+                  deleteBot(bot);
                   }
                 }
               >
