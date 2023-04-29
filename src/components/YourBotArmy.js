@@ -5,7 +5,11 @@ function YourBotArmy({ bots, removeBot , deleteBot }) {
   //your bot army code here...
 
   const mapBots = bots.map(bot => 
-   
+    <BotCard 
+    key={bot.id}
+    bot={bot}
+    clickEvent={removeBot}
+    deleteBot={deleteBot}
     />)
 
   return (
