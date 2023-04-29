@@ -5,7 +5,11 @@ const API = "http://localhost:8002/bots";
 function BotsPage() {
   //start here with your code for step one
   const [bots, setBots] = useState([]);
-  
+  useEffect(() => {
+    fetch(API)
+    .then(res => res.json())
+    // .then(json => console.log(json))
+    .then(setBots)
   },[])
   function enlistBot(bot){
     console.log(bot);
